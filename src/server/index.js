@@ -11,10 +11,8 @@ const app = express()
 
 app.use(express.static('dist'))
 
-console.log(__dirname)
-
 app.get('/', function (req, res) {
-    // res.sendFile('dist/index.html')
+    //res.sendFile('dist/index.html')
     res.sendFile(path.resolve('src/client/views/index.html'))
 })
 
@@ -24,5 +22,19 @@ app.listen(8080, function () {
 })
 
 app.get('/test', function (req, res) {
-    res.send(mockAPIResponse)
+    res.send('mockAPIResponse')
 })
+
+// Aylien API
+
+const defaultClient = AylienNewsApi.ApiClient.instance;
+
+const app_id = defaultClient.authentications["app_id"];
+app_id.apiKey = process.env["NEWSAPI_APP_ID"];
+
+console.log('hello Dave 👊')
+
+const app_key = defaultClient.authentications["app_key"];
+app_key.apiKey = process.env["NEWSAPI_APP_KEY"];
+
+const api = new AylienNewsApi.DefaultApi();

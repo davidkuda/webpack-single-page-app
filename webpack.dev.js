@@ -7,6 +7,10 @@ const {
 
 module.exports = {
     entry: './src/client/index.js',
+    output: {
+        libararyTarget: 'var',
+        library: 'Client'
+    },
     mode: 'development',
     devtool: 'source-map',
     stats: 'verbose',
