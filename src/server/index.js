@@ -18,11 +18,11 @@ app.get('/', function (req, res) {
 
 // designates what port the app will listen to for incoming requests
 app.listen(8081, function () {
-    console.log('Example app listening on port 8081!')
+    console.log('app listening on port 8081!')
 })
 
 app.get('/test', function (req, res) {
-    res.send('mockAPIResponse')
+    res.send(mockAPIResponse)
 })
 
 // Aylien API
@@ -38,3 +38,5 @@ const app_key = defaultClient.authentications["app_key"];
 app_key.apiKey = process.env["NEWSAPI_APP_KEY"];
 
 const api = new AylienNewsApi.DefaultApi();
+
+console.log(api)
