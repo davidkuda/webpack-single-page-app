@@ -8,7 +8,7 @@ const {
 module.exports = {
     entry: './src/client/index.js',
     output: {
-        libararyTarget: 'var',
+        libraryTarget: 'var',
         library: 'Client'
     },
     mode: 'development',
