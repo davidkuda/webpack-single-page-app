@@ -6,11 +6,18 @@ function handleSubmit(event) {
     Client.checkForName(formText)
 
     console.log("::: Form Submitted :::")
-    fetch('https://api.openweathermap.org/data/2.5/weather?zip=13086,DE&appid=f245a8ab742aa26adb273a9c50af5426&units=metric')
+    const baseUrl = 'https://api.meaningcloud.com/sentiment-2.1';
+    const apiKey = '?key=5e209f22ac0f0d3ad7045b336058b1fc';
+    const outputFormat = '&of=json';
+    let text = '&txt=Main%20dishes%20were%20quite%20good%2C%20but%20desserts%20were%20too%20sweet%20for%20me';
+    const language = '&lang=en';
+    const model = '&model=general';
+    let apiUrl = `${baseUrl}${apiKey}${text}${language}${model}`
+    fetch(apiUrl)
     .then(res => res.json())
     .then(function(res) {
         console.log(res)
-        document.getElementById('results').innerHTML = res.name;
+        document.getElementById('results').innerHTML = res.agreement;
     })
 }
 
