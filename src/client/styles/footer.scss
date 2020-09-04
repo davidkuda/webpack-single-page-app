@@ -1,0 +1,15 @@
+/* footer section */
+
+footer {
+    min-height: 20vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+    color: #eceff1;
+    text-align: center;
+
+    p {
+        padding: 0.5em;
+    }
+}

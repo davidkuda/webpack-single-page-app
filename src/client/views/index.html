@@ -1,40 +1,51 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>NLP Analysis</title>
-    </head>
 
-    <body>
+<head>
+    <meta charset="utf-8">
+    <title>NLP Analysis</title>
+</head>
 
-        <header>
-            <div class="">
-                Logo
-            </div>
-            <div class="">
-                navigation
-            </div>
-        </header>
+<body>
+    <main>
 
-        <main>
+        <section>
+            <h1>Natural Language Processing</h1>
+            <p>please enter a text in the field and click on submit. You will receive an analysis of your text.</p>
+            <p>if you want an example, go ahead and try this text:</p>
+            <blockquote>«I love coding and I think it is the greatest thing EVER!»</blockquote>
+        </section>
 
+        <section>
+            <form class="" onsubmit="return Client.handleSubmit(event)">
+                <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
+                <input id="submit" type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)"
+                    onsubmit="return Client.handleSubmit(event)">
+            </form>
             <section>
-                <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)"
-                        onsubmit="return Client.handleSubmit(event)">
-                </form>
+
                 <section>
+                    <strong>Form Results:</strong>
+                    <div id="results"></div>
+                </section>
+    </main>
 
-            <section>
-                <strong>Form Results:</strong>
-                <div id="results"></div>
-            </section>
-        </main>
+    <footer>
+        <p>This page was created by</p>
+        <p>Ozzie Kuda from Berlin ;)</p>
+        <div class="icon-container"></div>
+        <a href="https://ch.linkedin.com/in/ozzie-kuda-1458b8b8" target="_blank">
+            <span>LinkedIn</span>
+        </a>
+        <a href="https://www.youtube.com/channel/UCOXTUC5-jj2aOSgHTkpm_Tw" target="_blank">
+            <span>YouTube</span>
+        </a>
+        <a href="https://github.com/OzzieKuda" target="_blank">
+            <span>LinkedIn</span>
+        </a>
+        </div>
+    </footer>
 
-        <footer>
-            <p>This is a footer</p>
-        </footer>
+</body>
 
-    </body>
 </html>

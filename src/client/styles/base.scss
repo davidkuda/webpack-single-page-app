@@ -1,7 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
+
+* {
+    font-family: 'Kumbh Sans',
+    sans-serif;
+    color: white;
+}
+
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    margin: 1em;
+    background: #000046;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1CB5E0, #000046);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1CB5E0, #000046);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 main {
@@ -12,3 +27,20 @@ section {
     max-width: 800px;
     margin: 50px auto;
 }
+
+ a {
+     text-decoration: none;
+     color: white;
+ }
+
+h1 {
+    font-size: 2em;
+}
+
+ p {
+     padding: 1em 0;
+ }
+
+ blockquote {
+     padding-left: 2em;
+ }
