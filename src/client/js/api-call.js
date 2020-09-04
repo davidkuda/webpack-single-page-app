@@ -17,4 +17,6 @@ async function getWeather() {
     }
 };
 
-export { getWeather}
+export { getWeather }
+
+// https://api.openweathermap.org/data/2.5/weather?zip=13086,DE&appid=f245a8ab742aa26adb273a9c50af5426&units=metric
