@@ -4,6 +4,10 @@ This project is built with JavaScript. It uses JavaScript's async functionalitie
 
 All the code is finally built with __Webpack__ into a single JavaScript file.
 
+## functionality
+
+enter a text in the field and the app will analyze the sentiment of the text. It will return for instance whether the entered text is positive or negative or objective or subjective. 
+
 ## Tech Stack
 - JavaScript
 - NodeJS
