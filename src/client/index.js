@@ -4,16 +4,16 @@ import './styles/footer.scss';
 import './styles/form.scss';
 import './styles/header.scss';
 
-import { checkForName } from './js/nameChecker';
 import { handleSubmit } from './js/formHandler';
-import { getWeather } from './js/api-call'
+import { getWeather } from './js/api-call';
+import { testLog } from './js/testLog';
+import { createMarkup } from './js/create-markup';
 
-// console.log(checkForName);
-// console.log(handleSubmit);
-console.log('whazzup')
+console.log('hello from index.js')
 
 export {
-    checkForName,
     handleSubmit,
-    getWeather
+    getWeather,
+    testLog,
+    createMarkup,
 }
