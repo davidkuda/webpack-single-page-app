@@ -11,7 +11,7 @@
 
 .grid-main {
     display: grid;
-    grid-template-rows: 20vh 20vh min-content max-content;
+    grid-template-rows: max-content max-content min-content max-content;
     grid-template-columns: 100%;
     grid-gap: 0.2rem;
     grid-template-areas:

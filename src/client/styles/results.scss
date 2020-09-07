@@ -1,3 +1,16 @@
-.grid-results {
+.response__container {
     grid-area: results;
+    transition: all 1s ease-in-out;
+}
+
+.grid-response {
+    grid-area: results;
+}
+
+.category {
+    font-weight: 700;
+}
+
+.disclaimer {
+    font-size: small;
 }
