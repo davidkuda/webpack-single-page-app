@@ -8,23 +8,18 @@
 
 <body>
     <main>
-
         <section>
             <h1>Natural Language Processing</h1>
-            <p>please enter a text in the field and click on submit. You will receive an analysis of your text.</p>
-            <p>if you want an example, go ahead and try this text: «I love coding and I think it is the greatest thing EVER!»</p>
-        </section>
-
-        <section>
+            <p>please enter a link in the field and click on submit. You will receive a sentiment anaylsis of that page.
+            </p>
             <form class="" onsubmit="return Client.handleSubmit(event)">
-                <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
+                <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Link">
                 <input id="submit" type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)"
                     onsubmit="return Client.handleSubmit(event)">
             </form>
-            <section>
-
-            <section id="results">
-            </section>
+        </section>
+        <section id="results">
+        </section>
     </main>
 
     <footer>
@@ -42,7 +37,5 @@
         </a>
         </div>
     </footer>
-
 </body>
-
 </html>
