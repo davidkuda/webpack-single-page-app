@@ -19,12 +19,10 @@ function handleSubmit(event) {
     fetch(apiUrl)
     .then(res => res.json())
     .then(function(res) {
-        console.log(res)
-        const apiResponse = res;
+        console.log(res);
         Client.testLog();
-        results = document.getElementById('results');
-        Client.createMarkup(results);
-        // document.getElementById('results').innerHTML = res.agreement;
+        const resultsHtmlElement = document.getElementById('results');
+        Client.createMarkup(resultsHtmlElement, formInput, res);
     })
 }
 
