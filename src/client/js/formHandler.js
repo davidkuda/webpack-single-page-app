@@ -21,7 +21,7 @@ function handleSubmit(event) {
       .then(function (res) {
         console.log(res);
         const resultsHtmlElement = document.getElementById("results");
-        Client.createMarkup(resultsHtmlElement, formInput, res);
+        Client.analyzeContent(resultsHtmlElement, formInput, res);
       });
   }
 
@@ -30,7 +30,7 @@ function handleSubmit(event) {
       apiCall();
   } else {
       console.log('input != url')
-    //   document.getElementById("results").value = 'please insert a valid link to a page';
+      document.getElementById("results").value = 'please insert a valid link to a page';
   }
 }
 

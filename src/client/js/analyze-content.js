@@ -1,4 +1,4 @@
-function createMarkup(element, link, res) {
+function analyzeContent(element, link, res) {
     const results = `
     <div id="response">
         <div class="response__container">
@@ -37,4 +37,4 @@ function createMarkup(element, link, res) {
     element.insertAdjacentHTML('beforeend', results);
 };
 
-export { createMarkup };
+export { analyzeContent };
