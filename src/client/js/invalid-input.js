@@ -9,7 +9,7 @@ function invalidInput(element) {
         </div>
         </div>
     </section>`;
-    element.insertAdjacentHTML('beforeend', invalidInputMarkup);
+    element.innerHTML = invalidInputMarkup;
 };
 
 export {

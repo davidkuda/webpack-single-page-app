@@ -35,7 +35,7 @@ function analyzeContent(element, link, res) {
         </div>
         </div>
     </section>`;
-    element.insertAdjacentHTML('beforeend', results);
+    element.innerHTML = results;
 };
 
 export { analyzeContent };
