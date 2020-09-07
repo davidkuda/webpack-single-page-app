@@ -12,8 +12,9 @@
     </header>
     <main>
         <section class="grid-form">
-            <p>please enter a link in the field and click on submit. You will receive a sentiment anaylsis of that page.</p>
-            <form class="" onsubmit="return Client.handleSubmit(event)">
+            <p class="intro-text">please enter a link in the field and click on submit.<br>
+                You will receive a sentiment anaylsis of that page.</p>
+            <form class="grid-form" onsubmit="return Client.handleSubmit(event)">
                 <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Link">
                 <input id="submit" type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)"
                     onsubmit="return Client.handleSubmit(event)">
@@ -24,9 +25,8 @@
     </main>
 
     <footer class="grid-footer">
-        <p>This page was created by</p>
-        <p>Ozzie Kuda from Berlin</p>
-        <div class="icon-container"></div>
+        <p>made with ❤️ by Ozzie Kuda from Berlin</p>
+        <div class="links">
         <a href="https://ch.linkedin.com/in/ozzie-kuda-1458b8b8" target="_blank">
             <span>LinkedIn</span>
         </a>
