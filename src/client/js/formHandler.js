@@ -20,7 +20,6 @@ function handleSubmit(event) {
     .then(res => res.json())
     .then(function(res) {
         console.log(res);
-        Client.testLog();
         const resultsHtmlElement = document.getElementById('results');
         Client.createMarkup(resultsHtmlElement, formInput, res);
     })

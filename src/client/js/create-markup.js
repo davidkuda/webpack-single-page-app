@@ -26,7 +26,13 @@ function createMarkup(element, link, res) {
                 </li>
             </ul>
         </div>
-        <p class="disclaimer">Analysis done based on Meaning Cloud 's "Sentiment Analysis"-API. For an explanation of the categories visit: https://www.meaningcloud.com/developer/sentiment-analysis/doc/2.1/response</p>
+        <p class="disclaimer">Analysis done based on Meaning Cloud 's "Sentiment Analysis"-API. For an explanation of the categories visit:</p>
+        <a 
+            href="https://www.meaningcloud.com/developer/sentiment-analysis/doc/2.1/response"
+            target="_blank"
+            class="disclaimer">
+                https://www.meaningcloud.com/developer/sentiment-analysis/doc/2.1/response
+        </a>
     </section>`;
     element.insertAdjacentHTML('beforeend', results);
 };
