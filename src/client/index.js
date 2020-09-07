@@ -1,4 +1,3 @@
-// import './styles/resets.scss';
 import './styles/base.scss';
 import './styles/header.scss';
 import './styles/form.scss';
@@ -9,12 +8,15 @@ import { handleSubmit } from './js/formHandler';
 import { analyzeContent } from './js/analyze-content';
 import { checkInput } from "./js/check-input";
 import { invalidInput } from "./js/invalid-input";
+import { apiCall } from "./js/api-call";
 
 console.log('hello from index.js')
+console.log(apiCall('https://blog.urbansportsclub.com/en/community/building-a-recruiting-culture-fit-for-hyper-growth-a-deep-into-our-interview-training/'));
 
 export {
     handleSubmit,
     analyzeContent,
     checkInput,
-    invalidInput
+    invalidInput,
+    apiCall
 }
