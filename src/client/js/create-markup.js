@@ -1,7 +1,7 @@
-function createMarkup(element) {
-    let url = 'this is the url';
-    const newSection = `
-    <section id="response">
+function createMarkup(element, link, response) {
+    let url = link;
+    const results = `
+    <div id="response">
         <div class="response__container">
             <h2>Sentiment Analysis</h2>
             <p>
@@ -10,9 +10,7 @@ function createMarkup(element) {
             </p>
         </div>
     </section>`;
-    console.log('hello from create-markup.js!')
-    element.insertAdjacentHTML('beforeend', newSection);
-
+    element.insertAdjacentHTML('beforeend', results);
 };
 
 export { createMarkup };
