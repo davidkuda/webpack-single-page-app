@@ -1,4 +1,4 @@
-function createMarkup() {
+function createMarkup(element) {
     let url = 'this is the url';
     const newSection = `
     <section id="response">
@@ -10,6 +10,9 @@ function createMarkup() {
             </p>
         </div>
     </section>`;
+    console.log('hello from create-markup.js!')
+    element.insertAdjacentHTML('beforeend', newSection);
+
 };
 
 export { createMarkup };

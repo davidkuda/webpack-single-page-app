@@ -22,9 +22,8 @@ function handleSubmit(event) {
         console.log(res)
         const apiResponse = res;
         Client.testLog();
-        const newSection = Client.createMarkup();
-        console.log(newSetion)
-        document.getElementById('results').innerHTML = newSection;
+        results = document.getElementById('results');
+        Client.createMarkup(results);
         // document.getElementById('results').innerHTML = res.agreement;
     })
 }
