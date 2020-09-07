@@ -6,23 +6,24 @@
     <title>NLP Analysis</title>
 </head>
 
-<body>
+<body class="grid-main">
+    <header class="grid-header">
+        <h1>Natural Language Processing</h1>
+    </header>
     <main>
-        <section>
-            <h1>Natural Language Processing</h1>
-            <p>please enter a link in the field and click on submit. You will receive a sentiment anaylsis of that page.
-            </p>
+        <section class="grid-form">
+            <p>please enter a link in the field and click on submit. You will receive a sentiment anaylsis of that page.</p>
             <form class="" onsubmit="return Client.handleSubmit(event)">
                 <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Link">
                 <input id="submit" type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)"
                     onsubmit="return Client.handleSubmit(event)">
             </form>
         </section>
-        <section id="results">
+        <section id="results" class="grid-results">
         </section>
     </main>
 
-    <footer>
+    <footer class="grid-footer">
         <p>This page was created by</p>
         <p>Ozzie Kuda from Berlin</p>
         <div class="icon-container"></div>

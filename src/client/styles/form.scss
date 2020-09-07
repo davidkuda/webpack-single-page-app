@@ -1,3 +1,7 @@
+.grid-form {
+    grid-area: form;
+}
+
 form {
     display: flex;
     flex-flow: row;

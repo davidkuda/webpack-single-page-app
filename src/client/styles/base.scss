@@ -9,10 +9,21 @@ html {
     background-color: white;
 }
 
+.grid-main {
+    display: grid;
+    grid-template-rows: min-content min-content min-content min-content;
+    grid-template-columns: 100%;
+    grid-gap: 0.2rem;
+    grid-template-areas:
+        "header"
+        "form"
+        "results"
+        "footer";
+}
+
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
     background: #000046;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #1CB5E0, #000046);
@@ -27,9 +38,8 @@ main {
     flex: 2;
 }
 
-section {
-    max-width: 800px;
-    margin: 50px auto;
+.grid-results {
+    grid-area: results;
 }
 
  a {
@@ -38,7 +48,7 @@ section {
  }
 
 h1 {
-    font-size: 2em;
+    font-size: 4em;
 }
 
  p {
