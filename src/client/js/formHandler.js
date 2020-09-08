@@ -8,28 +8,28 @@ async function handleSubmit(event) {
     const resultsHtmlElement = document.getElementById("results");
 
     // API URL
-    const apiUrl = await Client.getSentimentAnalysisUrl(formInput);
+    let apiUrl = await Client.getSentimentAnalysisUrl(formInput);
 
     // API call
-    function apiCall() {
-        fetch(apiUrl)
-            .then((res) => res.json())
-            .then(function (res) {
-                console.log(res);
-                Client.analyzeContent(resultsHtmlElement, formInput, res);
-            });
-    }
+    let apiResponse = await Client.apiCall(apiUrl);
+    console.log('apiResponse:', apiResponse)
+
+    // function apiCall() {
+    //     fetch(apiUrl)
+    //         .then((res) => res.json())
+    //         .then(function (res) {
+    //             console.log(res);
+    //             Client.analyzeContent(resultsHtmlElement, formInput, res);
+    //         });
+    // }
 
     if (Client.checkInput(formInput)) {
         console.log('input == URL');
-        apiCall();
+        Client.analyzeContent(resultsHtmlElement, formInput, apiResponse);
     } else {
         console.log('input != url');
         Client.invalidInput(resultsHtmlElement);
-
     }
 }
 
-export {
-    handleSubmit
-}
+export { handleSubmit }

@@ -9,6 +9,8 @@ import { analyzeContent } from './js/analyze-content';
 import { checkInput } from "./js/check-input";
 import { invalidInput } from "./js/invalid-input";
 import { getSentimentAnalysisUrl } from "./js/get-sentiment-analysis-url";
+import { apiCall } from "./js/api-call";
+import { updateUi } from "./js/update-ui";
 
 console.log('hello from index.js')
 
@@ -17,5 +19,7 @@ export {
     analyzeContent,
     checkInput,
     invalidInput,
-    getSentimentAnalysisUrl
+    getSentimentAnalysisUrl,
+    apiCall,
+    updateUi
 }
