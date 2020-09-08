@@ -1,4 +1,5 @@
-function invalidInput(element) {
+function markupInvalidInput() {
+
     const invalidInputMarkup = `
     <div id="response">
         <div class="response__container">
@@ -9,9 +10,8 @@ function invalidInput(element) {
         </div>
         </div>
     </section>`;
-    element.innerHTML = invalidInputMarkup;
+    
+    return invalidInputMarkup;
 };
 
-export {
-    invalidInput
-};
+export { markupInvalidInput };
