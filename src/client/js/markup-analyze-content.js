@@ -1,5 +1,5 @@
 function markupAnalyzeContent(link, res) {
-    const results = `
+    const markup = `
     <div id="response">
         <div class="response__container">
             <h2>Sentiment Analysis</h2>
@@ -35,6 +35,7 @@ function markupAnalyzeContent(link, res) {
         </div>
         </div>
     </section>`;
+    return markup;
 };
 
 export { markupAnalyzeContent };
