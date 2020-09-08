@@ -29,7 +29,7 @@ async function handleSubmit(event) {
         Client.analyzeContent(resultsHtmlElement, formInput, apiResponse);
     } else {
         console.log('input != url');
-        Client.updateUi(await Client.invalidInput());
+        Client.updateUi(await Client.markupInvalidInput());
     }
 }
 
