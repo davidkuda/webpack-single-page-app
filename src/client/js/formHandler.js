@@ -4,8 +4,8 @@ async function handleSubmit(event) {
     // get user input and save it into a variable
     let formInput = document.getElementById("name").value;
 
-    // get target html element
-    const resultsHtmlElement = document.getElementById("results");
+    // // get target html element
+    // const resultsHtmlElement = document.getElementById("results");
 
     // API URL
     let apiUrl = await Client.getSentimentAnalysisUrl(formInput);
@@ -25,10 +25,11 @@ async function handleSubmit(event) {
 
     if (Client.checkInput(formInput)) {
         console.log('input == URL');
+        Client.updateUi()
         Client.analyzeContent(resultsHtmlElement, formInput, apiResponse);
     } else {
         console.log('input != url');
-        Client.invalidInput(resultsHtmlElement);
+        Client.updateUi(await Client.invalidInput());
     }
 }
 

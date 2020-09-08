@@ -1,5 +1,5 @@
 function updateUi(markup) {
-    targetElement = document.getElementById("results");
+    const targetElement = document.getElementById("results");
     targetElement.innerHTML = markup;
 };
 
