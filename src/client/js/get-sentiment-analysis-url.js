@@ -7,3 +7,5 @@ function getSentimentAnalysisUrl(formInput) {
      apiUrl = `${baseUrl}${apiKey}${link}${language}${model}`;
      return apiUrl;
 };
+
+export { getSentimentAnalysisUrl }
