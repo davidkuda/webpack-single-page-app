@@ -1,4 +1,4 @@
-function markupAnalyzeContent(element, link, res) {
+function markupAnalyzeContent(link, res) {
     const results = `
     <div id="response">
         <div class="response__container">
@@ -35,7 +35,6 @@ function markupAnalyzeContent(element, link, res) {
         </div>
         </div>
     </section>`;
-    element.innerHTML = results;
 };
 
 export { markupAnalyzeContent };

@@ -25,8 +25,8 @@ async function handleSubmit(event) {
 
     if (Client.checkInput(formInput)) {
         console.log('input == URL');
-        Client.updateUi()
-        Client.analyzeContent(resultsHtmlElement, formInput, apiResponse);
+        Client.updateUi(Client.markupAnalyzeContent(formInput, apiResponse))
+        // Client.analyzeContent(resultsHtmlElement, formInput, apiResponse);
     } else {
         console.log('input != url');
         Client.updateUi(await Client.markupInvalidInput());
