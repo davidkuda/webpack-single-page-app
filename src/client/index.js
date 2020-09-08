@@ -5,7 +5,7 @@ import './styles/results.scss';
 import './styles/footer.scss';
 
 import { handleSubmit } from './js/formHandler';
-import { analyzeContent } from './js/analyze-content';
+import { markupAnalyzeContent } from './js/markup-analyze-content';
 import { checkInput } from "./js/check-input";
 import { markupInvalidInput } from "./js/markup-invalid-input";
 import { getSentimentAnalysisUrl } from "./js/get-sentiment-analysis-url";
@@ -16,7 +16,7 @@ console.log('hello from index.js')
 
 export {
     handleSubmit,
-    analyzeContent,
+    markupAnalyzeContent,
     checkInput,
     markupInvalidInput,
     getSentimentAnalysisUrl,
