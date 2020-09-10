@@ -7,6 +7,7 @@ async function getSentimentAnalysisUrl(formInput) {
     language = "&lang=en",
     model = "&model=general",
     apiUrl = `${baseUrl}${apiKey}${link}${language}${model}`;
+    console.log(process.env.API_KEY)
     return apiUrl;
 };
 

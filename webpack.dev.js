@@ -1,9 +1,11 @@
-const path = require('path')
-const webpack = require('webpack')
-const HtmlWebPackPlugin = require("html-webpack-plugin")
-const {
-    CleanWebpackPlugin
-} = require('clean-webpack-plugin')
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+// const Dotenv = require('dotenv-webpack');
+const Dotenv = require('dotenv').config({
+    path: path.join(__dirname, '.env')
+});
 
 module.exports = {
     entry: './src/client/index.js',
@@ -38,6 +40,10 @@ module.exports = {
             // Automatically remove all unused webpack assets on rebuild
             cleanStaleWebpackAssets: true,
             protectWebpackAssets: false
+        }),
+        new Dotenv({
+            path: '.env',
+            safe: true // load .env.example (defaults to "false" which does not use dotenv-safe)
         })
     ]
 }
