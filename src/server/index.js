@@ -5,6 +5,7 @@ const path = require('path');
 var cors = require('cors');
 const express = require('express');
 const apiObj = require('./api.js');
+const fetch = require('node-fetch');
 
 const app = express();
 app.use(cors());
