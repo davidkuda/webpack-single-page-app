@@ -5,7 +5,7 @@ async function handleSubmit(event) {
     let formInput = document.getElementById("name").value;
 
     // post form input to server
-    postData('/form', {formInput: formInput});
+    Client.postData('/form', {formInput: formInput});
 
     // API URL
     let apiUrl = await Client.getSentimentAnalysisUrl(formInput);

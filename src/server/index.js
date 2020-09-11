@@ -24,7 +24,13 @@ app.listen(8081, function () {
     console.log('app listening on port 8081!')
 })
 
-// app.post('/form') {};
+// POST user Input
+const data = [];
+app.post('/form', addInput);
+function addInput(req, res) {
+    data.push(req.body);
+};
+
 
 app.get('/api', function (req, res) {
     res.send(apiObj)
