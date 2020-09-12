@@ -8,7 +8,6 @@ import { handleSubmit } from './js/formHandler';
 import { markupAnalyzeContent } from './js/markup-analyze-content';
 import { checkInput } from "./js/check-input";
 import { markupInvalidInput } from "./js/markup-invalid-input";
-import { getSentimentAnalysisUrl } from "./js/get-sentiment-analysis-url";
 import { apiCall } from "./js/api-call";
 import { updateUi } from "./js/update-ui";
 import { postData } from "./js/post-data";
@@ -20,7 +19,6 @@ export {
     markupAnalyzeContent,
     checkInput,
     markupInvalidInput,
-    getSentimentAnalysisUrl,
     apiCall,
     updateUi,
     postData

@@ -5,20 +5,18 @@ async function handleSubmit(event) {
     let formInput = document.getElementById("name").value;
 
     // post form input to server
-    Client.postData('/form', {formInput: formInput});
-
-    // API URL
-    let apiUrl = await Client.getSentimentAnalysisUrl(formInput);
+    // Client.postData('/form', {formInput: formInput});
 
     // API call
-    let apiResponse = await Client.apiCall(apiUrl);
+    let apiResponse = await Client.apiCall('localhost:8081/sentiment-analysis');
+    console.log('huhuhahahoho', apiResponse);
 
     // check if input is a url
     if (Client.checkInput(formInput)) {
         
         //if input == url, update ui to content analysis
         console.log('input == URL');
-        Client.updateUi(await Client.markupAnalyzeContent(formInput, apiResponse))
+        Client.updateUi(await Client.markupAnalyzeContent(formInput, apiResponse));
     }
     
     else {
