@@ -9,7 +9,6 @@ const bodyParser = require("body-parser");
 
 // implementing moduldes
 dotenv.config();
-console.log(`Your API key is ${process.env.API_KEY}`);
 
 // setting up Express
 const app = express();
@@ -39,7 +38,7 @@ function addInput(req, res) {
 
 const getSentimentAnalysisUrl = (formInput) => {
     const baseUrl = "https://api.meaningcloud.com/sentiment-2.1",
-        apiKey = process.env.API_KEY,
+        apiKey = "?key=" + process.env.API_KEY,
         link = "&url=" + formInput,
         language = "&lang=en",
         model = "&model=general",
@@ -50,17 +49,14 @@ const getSentimentAnalysisUrl = (formInput) => {
 let sampleWebsite = 'https://www.understandmyself.com/';
 
 // sample api to test
-const chukNorris = "https://api.chucknorris.io/jokes/random";
+const chuckNorris = "https://api.chucknorris.io/jokes/random";
 
 // fetch api request
-
-let projectData;
 
 const getData = async url => {
     try {
         const response = await fetch(url);
         const json = await response.json();
-        console.log(json);
         return json;
 
     } catch (error) {
@@ -68,14 +64,25 @@ const getData = async url => {
     }
 };
 
-app.get('/api', function (req, res) {
-    res.send(projectData)
+app.get('/sentiment-analysis', async function (req, res) {
+    console.log('this is req:', req);
+    let sentimentAnalysisUrl = await getSentimentAnalysisUrl(sampleWebsite);
+    let sentimentAnalysisFull = await getData(sentimentAnalysisUrl);
+    let sentimentAnalysis = {
+        source: sampleWebsite,
+        agreement: sentimentAnalysisFull.agreement, 
+        confidence: sentimentAnalysisFull.confidence, 
+        irony: sentimentAnalysisFull.irony, 
+        subjectivity: sentimentAnalysisFull.subjectivity
+    };
+    console.log('api requested!');
+    res.send(sentimentAnalysis);
 })
 
 app.get('/chuck', async function (req, res) {
-    let projectDataChuck = await getData(url);
+    let projectDataChuck = await getData(chuckNorris);
     console.log('hihihi');
-    res.send(projectDataChuck);
+    res.send(projectDataChuck.value);
 })
 
 console.log('hello Dave 👊')
