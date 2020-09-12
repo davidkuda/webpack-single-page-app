@@ -52,7 +52,6 @@ let sampleWebsite = 'https://www.understandmyself.com/';
 const chuckNorris = "https://api.chucknorris.io/jokes/random";
 
 // fetch api request
-
 const getData = async url => {
     try {
         const response = await fetch(url);
@@ -64,6 +63,7 @@ const getData = async url => {
     }
 };
 
+// api request to meaning cloud's sentiment analysis
 app.get('/sentiment-analysis', async function (req, res) {
     console.log('this is req:', req);
     let sentimentAnalysisUrl = await getSentimentAnalysisUrl(sampleWebsite);
@@ -79,6 +79,7 @@ app.get('/sentiment-analysis', async function (req, res) {
     res.send(sentimentAnalysis);
 })
 
+// sample api request to chuck norris api
 app.get('/chuck', async function (req, res) {
     let projectDataChuck = await getData(chuckNorris);
     console.log('hihihi');
