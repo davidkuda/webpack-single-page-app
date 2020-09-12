@@ -1,14 +1,16 @@
+// Requiring modules
 const dotenv = require('dotenv');
-dotenv.config();
-console.log(`Your API key is ${process.env.API_KEY}`);
 const path = require('path');
-var cors = require('cors');
+const cors = require('cors');
 const express = require('express');
 const apiObj = require('./api.js');
 const fetch = require('node-fetch');
 const bodyParser = require("body-parser");
 
+// implementing moduldes
 const app = express();
+dotenv.config();
+console.log(`Your API key is ${process.env.API_KEY}`);
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
