@@ -3,11 +3,9 @@ const dotenv = require('dotenv');
 const path = require('path');
 const cors = require('cors');
 const express = require('express');
-const apiObj = require('./api.js');
 const fetch = require('node-fetch');
 const bodyParser = require("body-parser");
 
-// implementing moduldes
 dotenv.config();
 
 // setting up Express
@@ -43,6 +41,7 @@ const getSentimentAnalysisUrl = (formInput) => {
         language = "&lang=en",
         model = "&model=general",
         apiUrl = `${baseUrl}${apiKey}${link}${language}${model}`;
+        console.log(apiUrl)
     return apiUrl;
 };
 
@@ -65,17 +64,17 @@ const getData = async url => {
 
 // api request to meaning cloud's sentiment analysis
 app.get('/sentiment-analysis', async function (req, res) {
-    console.log('this is req:', req);
-    let sentimentAnalysisUrl = await getSentimentAnalysisUrl(sampleWebsite);
+    console.log('this is req.query.input:', req.query.input);
+    let sentimentAnalysisUrl = await getSentimentAnalysisUrl(req.query.input);
     let sentimentAnalysisFull = await getData(sentimentAnalysisUrl);
+    console.log("this is the complete response: ", + sentimentAnalysisFull);
     let sentimentAnalysis = {
-        source: sampleWebsite,
-        agreement: sentimentAnalysisFull.agreement, 
-        confidence: sentimentAnalysisFull.confidence, 
-        irony: sentimentAnalysisFull.irony, 
-        subjectivity: sentimentAnalysisFull.subjectivity
+      source: req.query.input,
+      agreement: sentimentAnalysisFull.agreement,
+      confidence: sentimentAnalysisFull.confidence,
+      irony: sentimentAnalysisFull.irony,
+      subjectivity: sentimentAnalysisFull.subjectivity,
     };
-    console.log('api requested!');
     res.send(sentimentAnalysis);
 })
 

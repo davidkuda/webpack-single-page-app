@@ -8,7 +8,7 @@ async function handleSubmit(event) {
     // Client.postData('/form', {formInput: formInput});
 
     // API call
-    let apiResponse = await Client.apiCall('localhost:8081/sentiment-analysis');
+    let apiResponse = await Client.apiCall(`localhost:8081/sentiment-analysis?input=${formInput}`);
     console.log('huhuhahahoho', apiResponse);
 
     // check if input is a url
