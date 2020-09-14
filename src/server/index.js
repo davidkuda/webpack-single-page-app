@@ -11,9 +11,21 @@ dotenv.config();
 // setting up Express
 const app = express();
 
-app.use(cors());
+// setting up body-parser
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+// setting up cors
+app.use(cors());
+app.use((req, res, next) => {
+    res.header('Acess-Control-Allow-Origin', '*');
+    res.header('Acess-Control-Allow-Headers', 'Origin, X-Request-With, Content-Type, Accept, Authorization');
+    if (req.method === 'OPTIONS') {
+        res.header('Access-Control-Allow-Methods', 'PUT, POST, PATCH, DELETE, GET')
+        return res.status(200).json({});
+    };
+    next();
+});
 
 app.use(express.static('dist'));
 
