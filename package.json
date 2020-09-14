@@ -9,9 +9,10 @@
     "build-dev": "webpack-dev-server  --config webpack.dev.js --open"
   },
   "keywords": [],
-  "author": "",
+  "author": "David Kuda",
   "license": "ISC",
   "description": "",
+  "proxy": "http://localhost:4000",
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
