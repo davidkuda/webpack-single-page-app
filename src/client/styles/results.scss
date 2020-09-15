@@ -1,10 +1,10 @@
-.response__container {
+section.grid-results {
     grid-area: results;
-    transition: all 1s ease-in-out;
 }
 
-.grid-response {
-    grid-area: results;
+.response__container {
+    margin: 4em 0;
+    transition: all 1s ease-in-out;
 }
 
 .category {

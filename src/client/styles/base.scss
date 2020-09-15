@@ -39,6 +39,7 @@ body {
      padding: 0 2em;
  }
 
- div#results {
-    margin: 2em 0;
+div.response__container {
+    grid-area: results;
+    margin: 4em 0;
  }
