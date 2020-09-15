@@ -10,7 +10,6 @@ import { checkInput } from "./js/check-input";
 import { markupInvalidInput } from "./js/markup-invalid-input";
 import { apiCall } from "./js/api-call";
 import { updateUi } from "./js/update-ui";
-import { postData } from "./js/post-data";
 
 console.log('hello from index.js')
 
@@ -20,6 +19,5 @@ export {
     checkInput,
     markupInvalidInput,
     apiCall,
-    updateUi,
-    postData
+    updateUi
 }
