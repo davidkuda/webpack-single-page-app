@@ -16,11 +16,6 @@ async function handleSubmit(event) {
          console.log('input != url');
          Client.updateUi(await Client.markupInvalidInput());
      };
-
-    // post form input to server
-    // Client.postData('/form', {formInput: formInput});
-
-    // API call
 }
 
 export { handleSubmit }
