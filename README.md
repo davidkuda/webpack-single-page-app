@@ -6,10 +6,10 @@ All the code is finally built with __Webpack__ into a single JavaScript file.
 
 ## functionality
 
-enter a text in the field and the app will analyze the sentiment of the text. It will return for instance whether the entered text is positive or negative or objective or subjective. 
+enter a link in the field and the app will analyze the sentiment of the text. It will return for instance whether the entered text is positive or negative or objective or subjective. 
 
 ## Tech Stack
-- JavaScript
+- (vanilla) JavaScript
 - NodeJS
 - Webpack
 - Meaning Cloud's "Sentiment Analysis" API
