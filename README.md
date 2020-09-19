@@ -4,7 +4,7 @@ This project is built with JavaScript. It uses JavaScript's async functionalitie
 
 All the code is finally built with __Webpack__ into a single JavaScript file.
 
-![gif preview of app](https://github.com/OzzieKuda/webpack-single-page-app-with/blob/master/docs/screenshot.png)
+![gif preview of app](https://github.com/OzzieKuda/webpack-single-page-app-with/blob/master/docs/single-page-app-2.gif)
 
 ## running the app
 
